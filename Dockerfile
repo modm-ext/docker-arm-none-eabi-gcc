@@ -6,15 +6,15 @@ WORKDIR /work
 ADD . /work
 
 # Install any needed packages specified in requirements.txt
-RUN apt update && \
-    apt upgrade -y && \
-    apt install -y \
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y \
 # Development files
       build-essential \
       git \
       bzip2 \
       wget && \
-    apt clean && \
+    apt-get clean && \
     wget -qO- https://developer.arm.com/-/media/Files/downloads/gnu-rm/9-2020q2/gcc-arm-none-eabi-9-2020-q2-update-x86_64-linux.tar.bz2 | tar -xj
 
 ENV PATH "/work/gcc-arm-none-eabi-9-2020-q2-update/bin:$PATH"
