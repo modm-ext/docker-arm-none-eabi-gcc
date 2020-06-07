@@ -1,4 +1,4 @@
-FROM ubuntu:19.10
+FROM ubuntu:20.04
 LABEL maintainer="Niklas Hauser <niklas.hauser@rwth-aachen.de>"
 LABEL Description="Image for building and debugging arm-embedded projects from git"
 WORKDIR /work
